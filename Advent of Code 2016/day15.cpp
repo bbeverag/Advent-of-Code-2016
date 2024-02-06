@@ -9,6 +9,8 @@ using namespace std;
 
 // (time + disc# + startpos) % discpositions == 0
 
+// basic for loop, checks each disc using formula above, once all of them are modulus 0 it means the object can fall through.
+// the number of discs is specified when called, to differentiate between part one and part two.
 int runit (map <int,int> positions, map <int,int> starting, int discs) {
 	int time = -1;
 
@@ -23,6 +25,8 @@ int runit (map <int,int> positions, map <int,int> starting, int discs) {
 	return 0;
 }
 
+
+// import from input.txt into two maps -- one for number of positions and one for starting position.
 int main() {
 	map <int,int> positions;
 	map <int,int> starting;

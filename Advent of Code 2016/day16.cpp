@@ -3,6 +3,8 @@
 #include <sstream>
 using namespace std;
 
+// checksum logic starts at second position, goes by twos, and checks the position and the previous position to see if they match.
+// a stringstream is used for speed.
 string getchecksum(string a) {
     stringstream checksum;
     for (int i = 1; i < a.length(); i = i + 2) {
@@ -16,6 +18,8 @@ string getchecksum(string a) {
     return a;
 }
 
+// builds the data using a stringstream for speed.  Logic should be easy to follow, i opted to go through a backwards to build b.
+// screen output in this sub, i used only a portion of the produced string for the output since we ended up not needing it anyway.
 void getdata(string a, int disk) {
     while (a.length() < disk) {
         string b = "";
