@@ -56,7 +56,7 @@ int main() {
 	vector <int> code;
         ifstream myfile;
         string line;
-        myfile.open("input.txt", ios::in);
+        myfile.open("input2.txt", ios::in);
         if (myfile.is_open()) {
                 while ( getline (myfile,line) ) {
                         int n = line.length();

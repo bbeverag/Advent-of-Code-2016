@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <regex>
+#include <tuple>
 using namespace std;
 
 int main() {
@@ -10,7 +11,7 @@ int main() {
 	regex myregex("\\s*(\\d*)\\s*(\\d*)\\s*(\\d*)\\s*");
         ifstream myfile;
         string line;
-        myfile.open("input.txt", ios::in);
+        myfile.open("input3.txt", ios::in);
         if (myfile.is_open()) {
                 while ( getline (myfile,line) ) {
                         int n = line.length();
@@ -18,7 +19,7 @@ int main() {
 			regex_match(line, mymatch, myregex);
 			if (mymatch[0].matched == true)
 				triangles.push_back({stoi(mymatch[1]), stoi(mymatch[2]), stoi(mymatch[3])});
-		}
+				}
         myfile.close();
         }
         else cout << "Unable to open file";

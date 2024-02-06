@@ -192,7 +192,7 @@ int main() {
 	int output[30] = {-1, -1, -1};
         ifstream myfile;
         string line;
-        myfile.open("input.txt", ios::in);
+        myfile.open("input10.txt", ios::in);
         if (myfile.is_open()) {
                 while ( getline (myfile,line) ) {
                         int n = line.length();

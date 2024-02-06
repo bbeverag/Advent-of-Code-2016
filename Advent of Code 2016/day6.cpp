@@ -56,7 +56,7 @@ int main() {
 	string message = "";
         ifstream myfile;
         string line;
-        myfile.open("input.txt", ios::in);
+        myfile.open("input6.txt", ios::in);
         if (myfile.is_open()) {
                 while ( getline (myfile,line) ) {
 			input.push_back(line);

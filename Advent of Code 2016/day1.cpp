@@ -79,7 +79,7 @@ int main() {
 	int direction = 0;
 	int firstcross = 0;
 	vector <string> steps;
-        myfile.open("input.txt", ios::in);
+        myfile.open("input1.txt", ios::in);
         if (myfile.is_open()) {
                 while ( getline (myfile,line) ) {
                         int n = line.length();

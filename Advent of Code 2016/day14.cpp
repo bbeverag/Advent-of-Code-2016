@@ -25,8 +25,8 @@ string md5(const string& content)
   EVP_MD_CTX_free(context);
 
   output.resize(md_len * 2);
-  for (unsigned int i = 0 ; i < md_len ; ++i)
-    std::sprintf(&output[i * 2], "%02x", md_value[i]);
+  for (unsigned int i = 0; i < md_len; ++i)
+	  std::sprintf(&output[i * 2], "%02x", md_value[i]);
   return output;
 }
 

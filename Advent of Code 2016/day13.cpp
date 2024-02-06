@@ -3,6 +3,7 @@
 #include <string>
 #include <bitset>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int iswall(pair <int, int> xy) {
@@ -17,13 +18,13 @@ int checkmost(vector <pair <int, int>> realrooms) {
 	sort(realrooms.begin(), realrooms.end());
 	for (int i = 0; i < realrooms.size(); i++) {
 		if (realrooms[i].first == realrooms[i+1].first and realrooms[i].second == realrooms[i+1].second) {
-			realrooms.erase(i+1);
+			realrooms.erase(realrooms.begin()+i+1);
 			i--;
 		}
 	}
 	for (int i = 0; i < realrooms.size(); i++) {
 		if (iswall(realrooms[i]) == 1) {
-			realrooms.erase(i);
+			realrooms.erase(realrooms.begin()+i);
 			i--;
 		}
 	}
